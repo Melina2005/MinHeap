@@ -1,0 +1,5 @@
+Los montículos mínimos también conocidos como min-heaps son esenciales para optimizar el algoritmo de Dijkstra, que busca los caminos más cortos desde un nodo origen en grafos con pesos positivos. Durante el proceso, Dijkstra debe elegir constantemente el nodo no visitado con la distancia más pequeña; hacerlo manualmente costaría O(n), llevando el algoritmo a una complejidad total de O(n²).
+
+El min-heap soluciona esto permitiendo extraer el nodo con menor distancia en O(log n). En él se almacenan pares (distancia, nodo), usando la distancia como clave para mantener el orden. Cuando un nodo es procesado, se revisan sus vecinos y, si se encuentra un camino más corto, la distancia se actualiza y el nodo se reinserta o ajusta en el montículo.
+
+Gracias a este manejo eficiente de insertar, actualizar y extraer el mínimo, Dijkstra evita búsquedas costosas y mejora su rendimiento a O((n + m) log n), volviéndose mucho más adecuado para trabajar con grafos grandes.
